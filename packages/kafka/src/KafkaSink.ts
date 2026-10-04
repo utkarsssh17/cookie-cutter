@@ -56,8 +56,10 @@ type Message = { type: string } & IProducerMessage<Buffer>;
  * if a given message was identified as requiring `ExactlyOnceSemantics` based on the message's
  * metadata field of the same name (This requires the corresponding KafkaSource to enable the
  * `eos` flag during setup to mark messages accordingly). The sink will only send offsets that
- * meet the highwater mark for a topic-partition. This process allows the sink to
- * participate in a "consume-transform-produce" loop between multiple topics.
+ * meet the highwater mark for a source topic-partition and consumer group, committing
+ * the next offset to consume. This process allows the sink to participate in a
+ * "consume-transform-produce" loop between multiple topics. Only inputs represented
+ * in this sink's output batch can have their offsets committed here.
  */
 export class KafkaSink
     implements IOutputSink<IPublishedMessage>, IRequireInitialization, IDisposable
@@ -120,42 +122,42 @@ export class KafkaSink
             acks = -1; // All replicas
         }
 
-        const messagesByTopic: Map<string, Message[]> = new Map();
-        for (const msg of output) {
-            const topic =
-                msg.metadata[KafkaMetadata.Topic] ||
-                defaultTopicName(msg.message.type, this.config);
-            if (!messagesByTopic.has(topic)) {
-                messagesByTopic.set(topic, []);
+        try {
+            const messagesByTopic: Map<string, Message[]> = new Map();
+            for (const msg of output) {
+                const topic =
+                    msg.metadata[KafkaMetadata.Topic] ||
+                    defaultTopicName(msg.message.type, this.config);
+                if (!messagesByTopic.has(topic)) {
+                    messagesByTopic.set(topic, []);
+                }
+
+                const formattedMsg = this.formatMessage(msg, topic);
+                if (isNullOrUndefined(this.logMissingKey) && !formattedMsg.key) {
+                    this.logMissingKey = true;
+                }
+                messagesByTopic.get(topic).push(formattedMsg);
+                // If message is marked as EoS & sink supports transactions
+                // then record the message offset. We will later use this to mark the offset
+                // as participating in the transaction
+                if (
+                    transaction &&
+                    this.config.messagePublishingStrategy ===
+                        KafkaMessagePublishingStrategy.ExactlyOnceSemantics &&
+                    msg.original.metadata<boolean>(KafkaMetadata.ExactlyOnceSemantics)
+                ) {
+                    this.trackOffsets(msg.original, offsetTracker);
+                }
             }
 
-            const formattedMsg = this.formatMessage(msg, topic);
-            if (isNullOrUndefined(this.logMissingKey) && !formattedMsg.key) {
-                this.logMissingKey = true;
-            }
-            messagesByTopic.get(topic).push(formattedMsg);
-            // If message is marked as EoS & sink supports transactions
-            // then record the message offset. We will later use this to mark the offset
-            // as participating in the transaction
-            if (
-                transaction &&
-                this.config.messagePublishingStrategy ===
-                    KafkaMessagePublishingStrategy.ExactlyOnceSemantics &&
-                msg.original.metadata<boolean>(KafkaMetadata.ExactlyOnceSemantics)
-            ) {
-                this.trackOffsets(msg.original, topic, offsetTracker);
-            }
-        }
-
-        for (const [topic, messages] of messagesByTopic) {
-            if (messages.length <= 0) {
-                continue;
-            }
-            if (this.logMissingKey) {
-                this.logger.warn("Service is publishing messages without keys");
-                this.logMissingKey = false;
-            }
-            try {
+            for (const [topic, messages] of messagesByTopic) {
+                if (messages.length <= 0) {
+                    continue;
+                }
+                if (this.logMissingKey) {
+                    this.logger.warn("Service is publishing messages without keys");
+                    this.logMissingKey = false;
+                }
                 await this.messageProducer.sendMessages(
                     messages,
                     topic,
@@ -163,35 +165,35 @@ export class KafkaSink
                     sendWith,
                     compressionMode
                 );
+            }
 
-                if (transaction && offsetTracker[topic]) {
-                    // Send any offsets participating in transaction for this topic
-                    // tslint:disable-next-line:forin
-                    for (const consumerGroupId in offsetTracker[topic]) {
+            if (transaction) {
+                // Input topics can differ from every output topic. Commit their offsets
+                // only after all output messages have been sent successfully.
+                for (const [topic, consumerGroups] of Object.entries(offsetTracker)) {
+                    for (const [consumerGroupId, partitions] of Object.entries(consumerGroups)) {
                         await transaction.sendOffsets({
                             consumerGroupId,
                             topics: [
                                 {
                                     topic,
-                                    partitions: groupPartitions(
-                                        offsetTracker[topic][consumerGroupId]
-                                    ),
+                                    partitions: groupPartitions(partitions),
                                 },
                             ],
                         });
                     }
                 }
-            } catch (e) {
-                if (transaction) {
-                    await this.abortTransaction(transaction);
-                }
-
-                throw e;
+                await transaction.commit();
             }
-        }
-
-        if (transaction) {
-            await transaction.commit();
+        } catch (e) {
+            if (transaction) {
+                try {
+                    await this.abortTransaction(transaction);
+                } catch (abortError) {
+                    this.logger.error("Failed to abort Kafka transaction", abortError);
+                }
+            }
+            throw e;
         }
     }
 
@@ -273,10 +275,16 @@ export class KafkaSink
      * Record message's offset locally _if_ it is the highest offset we have
      * encountered for this message's consume group on the given topic-partition
      */
-    private trackOffsets(msg: MessageRef, topic: string, offsetTracker: IOffsetTracker): void {
+    private trackOffsets(msg: MessageRef, offsetTracker: IOffsetTracker): void {
+        const topic = msg.metadata<string>(KafkaMetadata.Topic);
         const consumerGroupId = msg.metadata<string>(KafkaMetadata.ConsumerGroupId);
         const offset = msg.metadata<string>(KafkaMetadata.Offset);
         const partition = msg.metadata<number>(KafkaMetadata.Partition);
+
+        if (!topic) {
+            this.logger.warn("Transactional message missing source topic");
+            return;
+        }
 
         if (!consumerGroupId) {
             this.logger.warn("Transactional message missing consumer id");
@@ -315,7 +323,7 @@ export class KafkaSink
 function groupPartitions(partitionsToOffset: { [key: number]: string }): kafkajs.PartitionOffset[] {
     return Object.entries(partitionsToOffset).map(([partition, offset]) => ({
         partition: parseInt(partition, 10),
-        offset,
+        offset: Long.fromValue(offset).add(1).toString(),
     }));
 }
 
