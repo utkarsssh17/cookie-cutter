@@ -324,14 +324,20 @@ export class ApplicationBuilder implements IApplicationBuilder {
         };
 
         this.activeLogger.info("shutting down");
-        const successfulDispose =
-            (await tryDispose(source)) &&
-            (await tryDispose(sink)) &&
-            (await tryDispose(serviceRegistry)) &&
-            (await tryDispose(state)) &&
-            (await tryDispose(metrics)) &&
-            (await tryDispose(traceBuilder)) &&
-            (await tryDispose(tracingBuilder));
+        let successfulDispose = true;
+        for (const component of [
+            source,
+            sink,
+            serviceRegistry,
+            state,
+            metrics,
+            traceBuilder,
+            tracingBuilder,
+        ]) {
+            if (!(await tryDispose(component))) {
+                successfulDispose = false;
+            }
+        }
 
         if (!successfulInit || !successfulDispose || !successfulRun) {
             if (!isUnderTest()) {
