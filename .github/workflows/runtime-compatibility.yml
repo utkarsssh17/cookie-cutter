@@ -1,0 +1,118 @@
+name: Kafka Runtime Compatibility
+
+on:
+  push:
+    branches: [develop, 'release/**', 'codex/**']
+    paths:
+      - '.github/workflows/runtime-compatibility.yml'
+      - 'compatibility/**'
+      - 'packages/core/**'
+      - 'packages/kafka/**'
+      - 'package.json'
+      - 'yarn.lock'
+      - 'tsconfig.json'
+      - '.npmrc'
+      - '.yarnrc'
+  pull_request:
+    branches: [master, develop, 'release/**', 'codex/**']
+    paths:
+      - '.github/workflows/runtime-compatibility.yml'
+      - 'compatibility/**'
+      - 'packages/core/**'
+      - 'packages/kafka/**'
+      - 'package.json'
+      - 'yarn.lock'
+      - 'tsconfig.json'
+      - '.npmrc'
+      - '.yarnrc'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kafka:
+    name: Compiled Kafka contract on Node 24 and Bun 1.4
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      CI: 'true'
+      COMPOSE_PROJECT_NAME: cookie-cutter-runtime-compatibility
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24.18.0'
+          package-manager-cache: false
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.4.0'
+
+      - name: Install Yarn
+        run: npm install --global --ignore-scripts --no-audit --no-fund yarn@1.22.22
+
+      - name: Install frozen dependencies
+        # Keep optional prebuilt LZ4 binaries. Ignore unrelated workspace install hooks;
+        # both runtimes must actually exercise the native codec in the contract.
+        run: yarn install --frozen-lockfile --ignore-scripts --non-interactive
+
+      - name: Build the shared JavaScript once
+        id: build
+        run: |
+          yarn workspace @walmartlabs/cookie-cutter-core build
+          yarn workspace @walmartlabs/cookie-cutter-kafka build
+
+      - name: Check the compatibility supervisor
+        run: node --test compatibility/run-kafka.test.cjs
+
+      - name: Start isolated Kafka
+        id: kafka
+        run: |
+          mkdir -p compatibility-results
+          docker compose -f compatibility/docker-compose.yaml up -d --wait --wait-timeout 180
+
+      - name: Check Node compatibility
+        run: |
+          node compatibility/run-kafka.cjs \
+            --runtime="$(command -v node)" --expected-runtime=node \
+            --broker=127.0.0.1:30001 --output=compatibility-results/node.json \
+            2>&1 | tee compatibility-results/node.log
+
+      - name: Check Bun compatibility
+        # Preserve a failed Node step while still collecting the Bun result.
+        if: ${{ always() && !cancelled() && steps.build.outcome == 'success' && steps.kafka.outcome == 'success' }}
+        run: |
+          node compatibility/run-kafka.cjs \
+            --runtime="$(command -v bun)" --expected-runtime=bun \
+            --broker=127.0.0.1:30001 --output=compatibility-results/bun.json \
+            2>&1 | tee compatibility-results/bun.log
+
+      - name: Collect Kafka diagnostics
+        if: always()
+        run: |
+          mkdir -p compatibility-results
+          docker compose -f compatibility/docker-compose.yaml ps --all > compatibility-results/kafka-status.log 2>&1
+          docker compose -f compatibility/docker-compose.yaml logs --no-color > compatibility-results/kafka.log 2>&1
+
+      - name: Stop Kafka
+        if: always()
+        run: docker compose -f compatibility/docker-compose.yaml down --volumes --remove-orphans
+
+      - name: Upload compatibility results and logs
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: kafka-runtime-compatibility
+          path: compatibility-results/
+          if-no-files-found: warn
+          retention-days: 14

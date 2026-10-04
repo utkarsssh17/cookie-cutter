@@ -93,10 +93,19 @@ describe("Kafka exactly-once offset commits", () => {
             await sink.initialize(DefaultComponentContext);
             await sink.sink(outputs.values());
 
-            const offsets = await admin.fetchOffsets({
-                groupId,
-                topics: [inputTopic, outputTopic],
-            });
+            // EndTxn can return before the offset commit marker is applied. Read raw
+            // offsets: resolveOffsets would replace an unset offset with the topic end.
+            const readOffsets = () =>
+                admin.fetchOffsets({ groupId, topics: [inputTopic, outputTopic] });
+            const deadline = Date.now() + 10000;
+            let offsets = await readOffsets();
+            while (
+                offsets.find(({ topic }) => topic === inputTopic)?.partitions[0]?.offset === "-1" &&
+                Date.now() < deadline
+            ) {
+                await new Promise((resolve) => setTimeout(resolve, 100));
+                offsets = await readOffsets();
+            }
             expect(offsets.find(({ topic }) => topic === inputTopic)?.partitions).toEqual([
                 expect.objectContaining({ partition: 0, offset: "3" }),
             ]);
