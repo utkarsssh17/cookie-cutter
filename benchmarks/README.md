@@ -1,5 +1,7 @@
 # Runtime baseline
 
+The first measured comparison is documented in [RESULTS.md](RESULTS.md), with raw samples and build provenance in [results/](results/).
+
 `runtime.cjs` compares Node.js and Bun running the **same compiled Cookie Cutter core**. It has no dependencies beyond the repository installation and uses neither Bun APIs nor runtime-specific transpilation. Build once with the repository's Node/Yarn toolchain before either runtime executes the script:
 
 ```sh

@@ -1,0 +1,2683 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-04T16:25:48.722Z",
+  "options": {
+    "samples": 5,
+    "count": 100000,
+    "keys": 128,
+    "mode": "concurrent",
+    "node": "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+    "bun": "/home/dalai/.bun/bin/bun",
+    "output": "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/results/2026-10-04-node24-bun1.4.json"
+  },
+  "driver": {
+    "executable": "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+    "version": "v24.18.0",
+    "argv": [
+      "--node=/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+      "--bun=/home/dalai/.bun/bin/bun",
+      "--samples=5",
+      "--count=100000",
+      "--keys=128",
+      "--output=/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/results/2026-10-04-node24-bun1.4.json"
+    ]
+  },
+  "host": {
+    "platform": "linux",
+    "release": "7.0.0-38-generic",
+    "arch": "x64",
+    "cpuModels": [
+      "12th Gen Intel(R) Core(TM) i9-12900K"
+    ],
+    "logicalCpus": 24,
+    "totalMemoryBytes": 65820934144,
+    "loadAverage": [
+      1.81,
+      2.12,
+      2
+    ]
+  },
+  "repository": {
+    "head": {
+      "stdout": "ed2db562b4e1acc5c10a3e3b1a1f4093618227d5",
+      "stderr": "",
+      "exitCode": 0,
+      "error": null
+    },
+    "status": {
+      "stdout": "",
+      "stderr": "",
+      "exitCode": 0,
+      "error": null
+    }
+  },
+  "versions": {
+    "node": {
+      "stdout": "v24.18.0",
+      "stderr": "",
+      "exitCode": 0,
+      "error": null
+    },
+    "bun": {
+      "stdout": "1.4.0",
+      "stderr": "",
+      "exitCode": 0,
+      "error": null
+    }
+  },
+  "attempts": [
+    {
+      "runtime": "node",
+      "scenario": "startup",
+      "phase": "rehearsal",
+      "sample": null,
+      "startedAt": "2026-10-04T16:25:48.735Z",
+      "wallMs": 66.398784,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 27.913733,
+        "setupMs": 8.085889,
+        "elapsedMs": 9.590422,
+        "messagesPerSecond": null,
+        "validationMs": 0.035192,
+        "scriptElapsedMs": 46.079785,
+        "rssBeforeBytes": 73535488,
+        "rssAfterBytes": 77860864,
+        "rssDeltaBytes": 4325376,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":27.913733,\"setupMs\":8.085889,\"elapsedMs\":9.590422,\"messagesPerSecond\":null,\"validationMs\":0.035192,\"scriptElapsedMs\":46.079785,\"rssBeforeBytes\":73535488,\"rssAfterBytes\":77860864,\"rssDeltaBytes\":4325376,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "startup",
+      "phase": "rehearsal",
+      "sample": null,
+      "startedAt": "2026-10-04T16:25:48.802Z",
+      "wallMs": 62.153933,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 32.1904,
+        "setupMs": 14.096275,
+        "elapsedMs": 7.816793,
+        "messagesPerSecond": null,
+        "validationMs": 0.03417,
+        "scriptElapsedMs": 55.272295,
+        "rssBeforeBytes": 45883392,
+        "rssAfterBytes": 52658176,
+        "rssDeltaBytes": 6774784,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":32.1904,\"setupMs\":14.096275,\"elapsedMs\":7.816793,\"messagesPerSecond\":null,\"validationMs\":0.03417,\"scriptElapsedMs\":55.272295,\"rssBeforeBytes\":45883392,\"rssAfterBytes\":52658176,\"rssDeltaBytes\":6774784,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "startup",
+      "phase": "measured",
+      "sample": 1,
+      "startedAt": "2026-10-04T16:25:48.864Z",
+      "wallMs": 76.195363,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 31.917616,
+        "setupMs": 8.217299,
+        "elapsedMs": 9.288205,
+        "messagesPerSecond": null,
+        "validationMs": 0.034611,
+        "scriptElapsedMs": 50.087476,
+        "rssBeforeBytes": 73809920,
+        "rssAfterBytes": 77545472,
+        "rssDeltaBytes": 3735552,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":31.917616,\"setupMs\":8.217299,\"elapsedMs\":9.288205,\"messagesPerSecond\":null,\"validationMs\":0.034611,\"scriptElapsedMs\":50.087476,\"rssBeforeBytes\":73809920,\"rssAfterBytes\":77545472,\"rssDeltaBytes\":3735552,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "startup",
+      "phase": "measured",
+      "sample": 1,
+      "startedAt": "2026-10-04T16:25:48.941Z",
+      "wallMs": 57.388656,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 28.888056,
+        "setupMs": 13.84671,
+        "elapsedMs": 7.556217,
+        "messagesPerSecond": null,
+        "validationMs": 0.030628,
+        "scriptElapsedMs": 51.076346,
+        "rssBeforeBytes": 45694976,
+        "rssAfterBytes": 53002240,
+        "rssDeltaBytes": 7307264,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":28.888056,\"setupMs\":13.84671,\"elapsedMs\":7.556217,\"messagesPerSecond\":null,\"validationMs\":0.030628,\"scriptElapsedMs\":51.076346,\"rssBeforeBytes\":45694976,\"rssAfterBytes\":53002240,\"rssDeltaBytes\":7307264,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "startup",
+      "phase": "measured",
+      "sample": 2,
+      "startedAt": "2026-10-04T16:25:48.998Z",
+      "wallMs": 60.536413,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 31.29295,
+        "setupMs": 14.003657,
+        "elapsedMs": 7.741901,
+        "messagesPerSecond": null,
+        "validationMs": 0.031975,
+        "scriptElapsedMs": 54.11841,
+        "rssBeforeBytes": 45633536,
+        "rssAfterBytes": 52035584,
+        "rssDeltaBytes": 6402048,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":31.29295,\"setupMs\":14.003657,\"elapsedMs\":7.741901,\"messagesPerSecond\":null,\"validationMs\":0.031975,\"scriptElapsedMs\":54.11841,\"rssBeforeBytes\":45633536,\"rssAfterBytes\":52035584,\"rssDeltaBytes\":6402048,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "startup",
+      "phase": "measured",
+      "sample": 2,
+      "startedAt": "2026-10-04T16:25:49.059Z",
+      "wallMs": 71.49574,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 27.000758,
+        "setupMs": 8.552884,
+        "elapsedMs": 12.321725,
+        "messagesPerSecond": null,
+        "validationMs": 0.033605,
+        "scriptElapsedMs": 48.377474,
+        "rssBeforeBytes": 73879552,
+        "rssAfterBytes": 77811712,
+        "rssDeltaBytes": 3932160,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":27.000758,\"setupMs\":8.552884,\"elapsedMs\":12.321725,\"messagesPerSecond\":null,\"validationMs\":0.033605,\"scriptElapsedMs\":48.377474,\"rssBeforeBytes\":73879552,\"rssAfterBytes\":77811712,\"rssDeltaBytes\":3932160,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "startup",
+      "phase": "measured",
+      "sample": 3,
+      "startedAt": "2026-10-04T16:25:49.131Z",
+      "wallMs": 67.783413,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 29.839295,
+        "setupMs": 9.15256,
+        "elapsedMs": 8.453033,
+        "messagesPerSecond": null,
+        "validationMs": 0.036184,
+        "scriptElapsedMs": 47.936202,
+        "rssBeforeBytes": 73879552,
+        "rssAfterBytes": 77811712,
+        "rssDeltaBytes": 3932160,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":29.839295,\"setupMs\":9.15256,\"elapsedMs\":8.453033,\"messagesPerSecond\":null,\"validationMs\":0.036184,\"scriptElapsedMs\":47.936202,\"rssBeforeBytes\":73879552,\"rssAfterBytes\":77811712,\"rssDeltaBytes\":3932160,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "startup",
+      "phase": "measured",
+      "sample": 3,
+      "startedAt": "2026-10-04T16:25:49.198Z",
+      "wallMs": 59.661998,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 29.249288,
+        "setupMs": 13.891928,
+        "elapsedMs": 7.282572,
+        "messagesPerSecond": null,
+        "validationMs": 0.030508,
+        "scriptElapsedMs": 51.184015,
+        "rssBeforeBytes": 45613056,
+        "rssAfterBytes": 52355072,
+        "rssDeltaBytes": 6742016,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":29.249288,\"setupMs\":13.891928,\"elapsedMs\":7.282572,\"messagesPerSecond\":null,\"validationMs\":0.030508,\"scriptElapsedMs\":51.184015,\"rssBeforeBytes\":45613056,\"rssAfterBytes\":52355072,\"rssDeltaBytes\":6742016,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "startup",
+      "phase": "measured",
+      "sample": 4,
+      "startedAt": "2026-10-04T16:25:49.258Z",
+      "wallMs": 57.931927,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 28.96518,
+        "setupMs": 13.832075,
+        "elapsedMs": 7.970827,
+        "messagesPerSecond": null,
+        "validationMs": 0.029553,
+        "scriptElapsedMs": 51.55557,
+        "rssBeforeBytes": 45617152,
+        "rssAfterBytes": 52486144,
+        "rssDeltaBytes": 6868992,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":28.96518,\"setupMs\":13.832075,\"elapsedMs\":7.970827,\"messagesPerSecond\":null,\"validationMs\":0.029553,\"scriptElapsedMs\":51.55557,\"rssBeforeBytes\":45617152,\"rssAfterBytes\":52486144,\"rssDeltaBytes\":6868992,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "startup",
+      "phase": "measured",
+      "sample": 4,
+      "startedAt": "2026-10-04T16:25:49.316Z",
+      "wallMs": 72.133506,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 30.098727,
+        "setupMs": 8.087946,
+        "elapsedMs": 9.457688,
+        "messagesPerSecond": null,
+        "validationMs": 0.035301,
+        "scriptElapsedMs": 48.147446,
+        "rssBeforeBytes": 73580544,
+        "rssAfterBytes": 77709312,
+        "rssDeltaBytes": 4128768,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":30.098727,\"setupMs\":8.087946,\"elapsedMs\":9.457688,\"messagesPerSecond\":null,\"validationMs\":0.035301,\"scriptElapsedMs\":48.147446,\"rssBeforeBytes\":73580544,\"rssAfterBytes\":77709312,\"rssDeltaBytes\":4128768,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "startup",
+      "phase": "measured",
+      "sample": 5,
+      "startedAt": "2026-10-04T16:25:49.389Z",
+      "wallMs": 65.330927,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 27.929078,
+        "setupMs": 8.050327,
+        "elapsedMs": 8.802789,
+        "messagesPerSecond": null,
+        "validationMs": 0.036129,
+        "scriptElapsedMs": 45.275394,
+        "rssBeforeBytes": 73629696,
+        "rssAfterBytes": 78151680,
+        "rssDeltaBytes": 4521984,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":27.929078,\"setupMs\":8.050327,\"elapsedMs\":8.802789,\"messagesPerSecond\":null,\"validationMs\":0.036129,\"scriptElapsedMs\":45.275394,\"rssBeforeBytes\":73629696,\"rssAfterBytes\":78151680,\"rssDeltaBytes\":4521984,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "startup",
+      "phase": "measured",
+      "sample": 5,
+      "startedAt": "2026-10-04T16:25:49.454Z",
+      "wallMs": 61.50367,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=startup",
+        "--mode=concurrent",
+        "--count=0",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "startup",
+        "mode": "concurrent",
+        "count": 0,
+        "keys": 128,
+        "coreRequireMs": 31.427401,
+        "setupMs": 13.972584,
+        "elapsedMs": 7.374813,
+        "messagesPerSecond": null,
+        "validationMs": 0.031633,
+        "scriptElapsedMs": 54.094615,
+        "rssBeforeBytes": 45060096,
+        "rssAfterBytes": 52121600,
+        "rssDeltaBytes": 7061504,
+        "validated": true,
+        "generated": 0,
+        "acknowledgements": {
+          "count": 0,
+          "checksum": 0
+        },
+        "published": {
+          "count": 0,
+          "checksum": 0,
+          "valueChecksum": 0
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"startup\",\"mode\":\"concurrent\",\"count\":0,\"keys\":128,\"coreRequireMs\":31.427401,\"setupMs\":13.972584,\"elapsedMs\":7.374813,\"messagesPerSecond\":null,\"validationMs\":0.031633,\"scriptElapsedMs\":54.094615,\"rssBeforeBytes\":45060096,\"rssAfterBytes\":52121600,\"rssDeltaBytes\":7061504,\"validated\":true,\"generated\":0,\"acknowledgements\":{\"count\":0,\"checksum\":0},\"published\":{\"count\":0,\"checksum\":0,\"valueChecksum\":0},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateless",
+      "phase": "rehearsal",
+      "sample": null,
+      "startedAt": "2026-10-04T16:25:49.516Z",
+      "wallMs": 9961.074063,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 26.36394,
+        "setupMs": 8.180947,
+        "elapsedMs": 9885.765119,
+        "messagesPerSecond": 10115.554921268002,
+        "validationMs": 0.026305,
+        "scriptElapsedMs": 9920.821173,
+        "rssBeforeBytes": 74067968,
+        "rssAfterBytes": 330772480,
+        "rssDeltaBytes": 256704512,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":26.36394,\"setupMs\":8.180947,\"elapsedMs\":9885.765119,\"messagesPerSecond\":10115.554921268002,\"validationMs\":0.026305,\"scriptElapsedMs\":9920.821173,\"rssBeforeBytes\":74067968,\"rssAfterBytes\":330772480,\"rssDeltaBytes\":256704512,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateless",
+      "phase": "rehearsal",
+      "sample": null,
+      "startedAt": "2026-10-04T16:25:59.477Z",
+      "wallMs": 2286.179027,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 29.051586,
+        "setupMs": 14.201136,
+        "elapsedMs": 2227.810068,
+        "messagesPerSecond": 44887.12993822416,
+        "validationMs": 0.035619,
+        "scriptElapsedMs": 2272.206718,
+        "rssBeforeBytes": 45563904,
+        "rssAfterBytes": 211931136,
+        "rssDeltaBytes": 166367232,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":29.051586,\"setupMs\":14.201136,\"elapsedMs\":2227.810068,\"messagesPerSecond\":44887.12993822416,\"validationMs\":0.035619,\"scriptElapsedMs\":2272.206718,\"rssBeforeBytes\":45563904,\"rssAfterBytes\":211931136,\"rssDeltaBytes\":166367232,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateless",
+      "phase": "measured",
+      "sample": 1,
+      "startedAt": "2026-10-04T16:26:01.763Z",
+      "wallMs": 10080.615031,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 26.948495,
+        "setupMs": 7.999096,
+        "elapsedMs": 10006.665527,
+        "messagesPerSecond": 9993.338912965548,
+        "validationMs": 0.024707,
+        "scriptElapsedMs": 10042.13133,
+        "rssBeforeBytes": 73740288,
+        "rssAfterBytes": 353140736,
+        "rssDeltaBytes": 279400448,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":26.948495,\"setupMs\":7.999096,\"elapsedMs\":10006.665527,\"messagesPerSecond\":9993.338912965548,\"validationMs\":0.024707,\"scriptElapsedMs\":10042.13133,\"rssBeforeBytes\":73740288,\"rssAfterBytes\":353140736,\"rssDeltaBytes\":279400448,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateless",
+      "phase": "measured",
+      "sample": 1,
+      "startedAt": "2026-10-04T16:26:11.844Z",
+      "wallMs": 2289.343873,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 33.559556,
+        "setupMs": 13.859584,
+        "elapsedMs": 2225.473252,
+        "messagesPerSecond": 44934.26281809116,
+        "validationMs": 0.07763,
+        "scriptElapsedMs": 2274.157345,
+        "rssBeforeBytes": 44982272,
+        "rssAfterBytes": 218693632,
+        "rssDeltaBytes": 173711360,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":33.559556,\"setupMs\":13.859584,\"elapsedMs\":2225.473252,\"messagesPerSecond\":44934.26281809116,\"validationMs\":0.07763,\"scriptElapsedMs\":2274.157345,\"rssBeforeBytes\":44982272,\"rssAfterBytes\":218693632,\"rssDeltaBytes\":173711360,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateless",
+      "phase": "measured",
+      "sample": 2,
+      "startedAt": "2026-10-04T16:26:14.133Z",
+      "wallMs": 2311.110134,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 32.709232,
+        "setupMs": 14.026689,
+        "elapsedMs": 2247.687238,
+        "messagesPerSecond": 44490.17563892935,
+        "validationMs": 0.031698,
+        "scriptElapsedMs": 2295.621857,
+        "rssBeforeBytes": 46014464,
+        "rssAfterBytes": 216109056,
+        "rssDeltaBytes": 170094592,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":32.709232,\"setupMs\":14.026689,\"elapsedMs\":2247.687238,\"messagesPerSecond\":44490.17563892935,\"validationMs\":0.031698,\"scriptElapsedMs\":2295.621857,\"rssBeforeBytes\":46014464,\"rssAfterBytes\":216109056,\"rssDeltaBytes\":170094592,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateless",
+      "phase": "measured",
+      "sample": 2,
+      "startedAt": "2026-10-04T16:26:16.445Z",
+      "wallMs": 10202.452721,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 27.596402,
+        "setupMs": 8.073781,
+        "elapsedMs": 10129.917155,
+        "messagesPerSecond": 9871.74904492099,
+        "validationMs": 0.027408,
+        "scriptElapsedMs": 10166.109504,
+        "rssBeforeBytes": 74203136,
+        "rssAfterBytes": 333287424,
+        "rssDeltaBytes": 259084288,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":27.596402,\"setupMs\":8.073781,\"elapsedMs\":10129.917155,\"messagesPerSecond\":9871.74904492099,\"validationMs\":0.027408,\"scriptElapsedMs\":10166.109504,\"rssBeforeBytes\":74203136,\"rssAfterBytes\":333287424,\"rssDeltaBytes\":259084288,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateless",
+      "phase": "measured",
+      "sample": 3,
+      "startedAt": "2026-10-04T16:26:26.647Z",
+      "wallMs": 9963.96124,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 26.596259,
+        "setupMs": 11.901977,
+        "elapsedMs": 9890.307116,
+        "messagesPerSecond": 10110.909482095398,
+        "validationMs": 0.025351,
+        "scriptElapsedMs": 9929.307373,
+        "rssBeforeBytes": 73662464,
+        "rssAfterBytes": 318197760,
+        "rssDeltaBytes": 244535296,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":26.596259,\"setupMs\":11.901977,\"elapsedMs\":9890.307116,\"messagesPerSecond\":10110.909482095398,\"validationMs\":0.025351,\"scriptElapsedMs\":9929.307373,\"rssBeforeBytes\":73662464,\"rssAfterBytes\":318197760,\"rssDeltaBytes\":244535296,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateless",
+      "phase": "measured",
+      "sample": 3,
+      "startedAt": "2026-10-04T16:26:36.611Z",
+      "wallMs": 2261.47047,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 29.837414,
+        "setupMs": 13.435802,
+        "elapsedMs": 2201.052971,
+        "messagesPerSecond": 45432.800263124605,
+        "validationMs": 0.031437,
+        "scriptElapsedMs": 2245.486073,
+        "rssBeforeBytes": 46010368,
+        "rssAfterBytes": 211443712,
+        "rssDeltaBytes": 165433344,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":29.837414,\"setupMs\":13.435802,\"elapsedMs\":2201.052971,\"messagesPerSecond\":45432.800263124605,\"validationMs\":0.031437,\"scriptElapsedMs\":2245.486073,\"rssBeforeBytes\":46010368,\"rssAfterBytes\":211443712,\"rssDeltaBytes\":165433344,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateless",
+      "phase": "measured",
+      "sample": 4,
+      "startedAt": "2026-10-04T16:26:38.873Z",
+      "wallMs": 2234.3002,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 28.579094,
+        "setupMs": 13.523052,
+        "elapsedMs": 2178.082433,
+        "messagesPerSecond": 45911.944600858915,
+        "validationMs": 0.034502,
+        "scriptElapsedMs": 2220.977189,
+        "rssBeforeBytes": 45957120,
+        "rssAfterBytes": 214106112,
+        "rssDeltaBytes": 168148992,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":28.579094,\"setupMs\":13.523052,\"elapsedMs\":2178.082433,\"messagesPerSecond\":45911.944600858915,\"validationMs\":0.034502,\"scriptElapsedMs\":2220.977189,\"rssBeforeBytes\":45957120,\"rssAfterBytes\":214106112,\"rssDeltaBytes\":168148992,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateless",
+      "phase": "measured",
+      "sample": 4,
+      "startedAt": "2026-10-04T16:26:41.107Z",
+      "wallMs": 10133.029953,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 26.387289,
+        "setupMs": 8.106615,
+        "elapsedMs": 10061.055685,
+        "messagesPerSecond": 9939.314832447426,
+        "validationMs": 0.028755,
+        "scriptElapsedMs": 10096.054311,
+        "rssBeforeBytes": 73502720,
+        "rssAfterBytes": 321060864,
+        "rssDeltaBytes": 247558144,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":26.387289,\"setupMs\":8.106615,\"elapsedMs\":10061.055685,\"messagesPerSecond\":9939.314832447426,\"validationMs\":0.028755,\"scriptElapsedMs\":10096.054311,\"rssBeforeBytes\":73502720,\"rssAfterBytes\":321060864,\"rssDeltaBytes\":247558144,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateless",
+      "phase": "measured",
+      "sample": 5,
+      "startedAt": "2026-10-04T16:26:51.240Z",
+      "wallMs": 10072.971676,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 26.198344,
+        "setupMs": 10.807372,
+        "elapsedMs": 9992.162283,
+        "messagesPerSecond": 10007.84386479925,
+        "validationMs": 0.024643,
+        "scriptElapsedMs": 10029.67936,
+        "rssBeforeBytes": 74305536,
+        "rssAfterBytes": 317820928,
+        "rssDeltaBytes": 243515392,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":26.198344,\"setupMs\":10.807372,\"elapsedMs\":9992.162283,\"messagesPerSecond\":10007.84386479925,\"validationMs\":0.024643,\"scriptElapsedMs\":10029.67936,\"rssBeforeBytes\":74305536,\"rssAfterBytes\":317820928,\"rssDeltaBytes\":243515392,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateless",
+      "phase": "measured",
+      "sample": 5,
+      "startedAt": "2026-10-04T16:27:01.313Z",
+      "wallMs": 2284.736554,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateless",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateless",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 32.034943,
+        "setupMs": 13.625247,
+        "elapsedMs": 2222.415694,
+        "messagesPerSecond": 44996.08253756329,
+        "validationMs": 0.032843,
+        "scriptElapsedMs": 2269.221222,
+        "rssBeforeBytes": 45764608,
+        "rssAfterBytes": 219992064,
+        "rssDeltaBytes": 174227456,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 0,
+          "events": 0,
+          "eventIdChecksum": 0,
+          "total": 0,
+          "weightedTotal": 0,
+          "sourceLoads": 0
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateless\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":32.034943,\"setupMs\":13.625247,\"elapsedMs\":2222.415694,\"messagesPerSecond\":44996.08253756329,\"validationMs\":0.032843,\"scriptElapsedMs\":2269.221222,\"rssBeforeBytes\":45764608,\"rssAfterBytes\":219992064,\"rssDeltaBytes\":174227456,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":0,\"events\":0,\"eventIdChecksum\":0,\"total\":0,\"weightedTotal\":0,\"sourceLoads\":0}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateful",
+      "phase": "rehearsal",
+      "sample": null,
+      "startedAt": "2026-10-04T16:27:03.598Z",
+      "wallMs": 11257.415389,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 26.893095,
+        "setupMs": 8.494995,
+        "elapsedMs": 11166.243235,
+        "messagesPerSecond": 8955.563468880498,
+        "validationMs": 7.663069,
+        "scriptElapsedMs": 11209.774685,
+        "rssBeforeBytes": 73957376,
+        "rssAfterBytes": 365211648,
+        "rssDeltaBytes": 291254272,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":26.893095,\"setupMs\":8.494995,\"elapsedMs\":11166.243235,\"messagesPerSecond\":8955.563468880498,\"validationMs\":7.663069,\"scriptElapsedMs\":11209.774685,\"rssBeforeBytes\":73957376,\"rssAfterBytes\":365211648,\"rssDeltaBytes\":291254272,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateful",
+      "phase": "rehearsal",
+      "sample": null,
+      "startedAt": "2026-10-04T16:27:14.856Z",
+      "wallMs": 2801.489022,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 28.972852,
+        "setupMs": 14.293837,
+        "elapsedMs": 2737.006151,
+        "messagesPerSecond": 36536.271562072936,
+        "validationMs": 6.588501,
+        "scriptElapsedMs": 2787.649433,
+        "rssBeforeBytes": 45633536,
+        "rssAfterBytes": 246538240,
+        "rssDeltaBytes": 200904704,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":28.972852,\"setupMs\":14.293837,\"elapsedMs\":2737.006151,\"messagesPerSecond\":36536.271562072936,\"validationMs\":6.588501,\"scriptElapsedMs\":2787.649433,\"rssBeforeBytes\":45633536,\"rssAfterBytes\":246538240,\"rssDeltaBytes\":200904704,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateful",
+      "phase": "measured",
+      "sample": 1,
+      "startedAt": "2026-10-04T16:27:17.657Z",
+      "wallMs": 11242.327655,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 27.81021,
+        "setupMs": 8.85145,
+        "elapsedMs": 11150.746575,
+        "messagesPerSecond": 8968.009390886906,
+        "validationMs": 8.486483,
+        "scriptElapsedMs": 11196.567796,
+        "rssBeforeBytes": 74293248,
+        "rssAfterBytes": 355065856,
+        "rssDeltaBytes": 280772608,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":27.81021,\"setupMs\":8.85145,\"elapsedMs\":11150.746575,\"messagesPerSecond\":8968.009390886906,\"validationMs\":8.486483,\"scriptElapsedMs\":11196.567796,\"rssBeforeBytes\":74293248,\"rssAfterBytes\":355065856,\"rssDeltaBytes\":280772608,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateful",
+      "phase": "measured",
+      "sample": 1,
+      "startedAt": "2026-10-04T16:27:28.900Z",
+      "wallMs": 2719.581258,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 29.209949,
+        "setupMs": 14.389592,
+        "elapsedMs": 2653.985995,
+        "messagesPerSecond": 37679.17396263427,
+        "validationMs": 6.593677,
+        "scriptElapsedMs": 2704.980421,
+        "rssBeforeBytes": 45625344,
+        "rssAfterBytes": 249495552,
+        "rssDeltaBytes": 203870208,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":29.209949,\"setupMs\":14.389592,\"elapsedMs\":2653.985995,\"messagesPerSecond\":37679.17396263427,\"validationMs\":6.593677,\"scriptElapsedMs\":2704.980421,\"rssBeforeBytes\":45625344,\"rssAfterBytes\":249495552,\"rssDeltaBytes\":203870208,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateful",
+      "phase": "measured",
+      "sample": 2,
+      "startedAt": "2026-10-04T16:27:31.619Z",
+      "wallMs": 2805.192901,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 30.733281,
+        "setupMs": 14.290966,
+        "elapsedMs": 2734.211321,
+        "messagesPerSecond": 36573.61785899796,
+        "validationMs": 10.053012,
+        "scriptElapsedMs": 2790.437879,
+        "rssBeforeBytes": 46133248,
+        "rssAfterBytes": 257122304,
+        "rssDeltaBytes": 210989056,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":30.733281,\"setupMs\":14.290966,\"elapsedMs\":2734.211321,\"messagesPerSecond\":36573.61785899796,\"validationMs\":10.053012,\"scriptElapsedMs\":2790.437879,\"rssBeforeBytes\":46133248,\"rssAfterBytes\":257122304,\"rssDeltaBytes\":210989056,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateful",
+      "phase": "measured",
+      "sample": 2,
+      "startedAt": "2026-10-04T16:27:34.425Z",
+      "wallMs": 11206.391966,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 26.402355,
+        "setupMs": 8.305103,
+        "elapsedMs": 11117.427572,
+        "messagesPerSecond": 8994.886573568225,
+        "validationMs": 7.690816,
+        "scriptElapsedMs": 11160.317834,
+        "rssBeforeBytes": 73179136,
+        "rssAfterBytes": 361418752,
+        "rssDeltaBytes": 288239616,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":26.402355,\"setupMs\":8.305103,\"elapsedMs\":11117.427572,\"messagesPerSecond\":8994.886573568225,\"validationMs\":7.690816,\"scriptElapsedMs\":11160.317834,\"rssBeforeBytes\":73179136,\"rssAfterBytes\":361418752,\"rssDeltaBytes\":288239616,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateful",
+      "phase": "measured",
+      "sample": 3,
+      "startedAt": "2026-10-04T16:27:45.631Z",
+      "wallMs": 11157.406069,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 28.294442,
+        "setupMs": 8.304614,
+        "elapsedMs": 11071.729752,
+        "messagesPerSecond": 9032.012363012742,
+        "validationMs": 7.403063,
+        "scriptElapsedMs": 11116.383784,
+        "rssBeforeBytes": 73670656,
+        "rssAfterBytes": 353103872,
+        "rssDeltaBytes": 279433216,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":28.294442,\"setupMs\":8.304614,\"elapsedMs\":11071.729752,\"messagesPerSecond\":9032.012363012742,\"validationMs\":7.403063,\"scriptElapsedMs\":11116.383784,\"rssBeforeBytes\":73670656,\"rssAfterBytes\":353103872,\"rssDeltaBytes\":279433216,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateful",
+      "phase": "measured",
+      "sample": 3,
+      "startedAt": "2026-10-04T16:27:56.789Z",
+      "wallMs": 2790.483833,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 28.5469,
+        "setupMs": 13.934329,
+        "elapsedMs": 2725.859491,
+        "messagesPerSecond": 36685.67669396427,
+        "validationMs": 6.662525,
+        "scriptElapsedMs": 2775.761697,
+        "rssBeforeBytes": 46088192,
+        "rssAfterBytes": 252895232,
+        "rssDeltaBytes": 206807040,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":28.5469,\"setupMs\":13.934329,\"elapsedMs\":2725.859491,\"messagesPerSecond\":36685.67669396427,\"validationMs\":6.662525,\"scriptElapsedMs\":2775.761697,\"rssBeforeBytes\":46088192,\"rssAfterBytes\":252895232,\"rssDeltaBytes\":206807040,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateful",
+      "phase": "measured",
+      "sample": 4,
+      "startedAt": "2026-10-04T16:27:59.579Z",
+      "wallMs": 2809.204586,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 32.936334,
+        "setupMs": 13.939004,
+        "elapsedMs": 2727.371645,
+        "messagesPerSecond": 36665.33682101106,
+        "validationMs": 12.835629,
+        "scriptElapsedMs": 2788.237055,
+        "rssBeforeBytes": 45563904,
+        "rssAfterBytes": 257503232,
+        "rssDeltaBytes": 211939328,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":32.936334,\"setupMs\":13.939004,\"elapsedMs\":2727.371645,\"messagesPerSecond\":36665.33682101106,\"validationMs\":12.835629,\"scriptElapsedMs\":2788.237055,\"rssBeforeBytes\":45563904,\"rssAfterBytes\":257503232,\"rssDeltaBytes\":211939328,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateful",
+      "phase": "measured",
+      "sample": 4,
+      "startedAt": "2026-10-04T16:28:02.388Z",
+      "wallMs": 11107.726257,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 27.110833,
+        "setupMs": 8.484635,
+        "elapsedMs": 11008.431074,
+        "messagesPerSecond": 9083.946597638478,
+        "validationMs": 19.013001,
+        "scriptElapsedMs": 11063.528719,
+        "rssBeforeBytes": 74350592,
+        "rssAfterBytes": 373223424,
+        "rssDeltaBytes": 298872832,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":27.110833,\"setupMs\":8.484635,\"elapsedMs\":11008.431074,\"messagesPerSecond\":9083.946597638478,\"validationMs\":19.013001,\"scriptElapsedMs\":11063.528719,\"rssBeforeBytes\":74350592,\"rssAfterBytes\":373223424,\"rssDeltaBytes\":298872832,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "node",
+      "scenario": "stateful",
+      "phase": "measured",
+      "sample": 5,
+      "startedAt": "2026-10-04T16:28:13.496Z",
+      "wallMs": 11232.001843,
+      "success": true,
+      "command": [
+        "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "node",
+        "runtimeVersion": "24.18.0",
+        "nodeCompatibilityVersion": "24.18.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 29.476612,
+        "setupMs": 8.400799,
+        "elapsedMs": 11143.964721,
+        "messagesPerSecond": 8973.467029338059,
+        "validationMs": 7.482068,
+        "scriptElapsedMs": 11189.823164,
+        "rssBeforeBytes": 74301440,
+        "rssAfterBytes": 371748864,
+        "rssDeltaBytes": 297447424,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"node\",\"runtimeVersion\":\"24.18.0\",\"nodeCompatibilityVersion\":\"24.18.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":29.476612,\"setupMs\":8.400799,\"elapsedMs\":11143.964721,\"messagesPerSecond\":8973.467029338059,\"validationMs\":7.482068,\"scriptElapsedMs\":11189.823164,\"rssBeforeBytes\":74301440,\"rssAfterBytes\":371748864,\"rssDeltaBytes\":297447424,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "bun",
+      "scenario": "stateful",
+      "phase": "measured",
+      "sample": 5,
+      "startedAt": "2026-10-04T16:28:24.728Z",
+      "wallMs": 2825.996504,
+      "success": true,
+      "command": [
+        "/home/dalai/.bun/bin/bun",
+        "/home/dalai/Documents/ChatGPT/Walmart-CC/cookie-cutter/benchmarks/runtime.cjs",
+        "--scenario=stateful",
+        "--mode=concurrent",
+        "--count=100000",
+        "--keys=128"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "parseError": null,
+      "result": {
+        "schemaVersion": 1,
+        "runtime": "bun",
+        "runtimeVersion": "1.4.0",
+        "nodeCompatibilityVersion": "26.3.0",
+        "platform": "linux",
+        "arch": "x64",
+        "coreVersion": "1.6.0-beta.7",
+        "scenario": "stateful",
+        "mode": "concurrent",
+        "count": 100000,
+        "keys": 128,
+        "coreRequireMs": 29.050804,
+        "setupMs": 14.134041,
+        "elapsedMs": 2761.330506,
+        "messagesPerSecond": 36214.42626397436,
+        "validationMs": 6.649951,
+        "scriptElapsedMs": 2811.925894,
+        "rssBeforeBytes": 46075904,
+        "rssAfterBytes": 253829120,
+        "rssDeltaBytes": 207753216,
+        "validated": true,
+        "generated": 100000,
+        "acknowledgements": {
+          "count": 100000,
+          "checksum": 5000050000
+        },
+        "published": {
+          "count": 100000,
+          "checksum": 5000050000,
+          "valueChecksum": 10000100000
+        },
+        "releaseErrors": 0,
+        "state": {
+          "keys": 128,
+          "events": 100000,
+          "eventIdChecksum": 5000050000,
+          "total": 100000,
+          "weightedTotal": 6448464,
+          "sourceLoads": 128
+        }
+      },
+      "stdout": "{\"schemaVersion\":1,\"runtime\":\"bun\",\"runtimeVersion\":\"1.4.0\",\"nodeCompatibilityVersion\":\"26.3.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"coreVersion\":\"1.6.0-beta.7\",\"scenario\":\"stateful\",\"mode\":\"concurrent\",\"count\":100000,\"keys\":128,\"coreRequireMs\":29.050804,\"setupMs\":14.134041,\"elapsedMs\":2761.330506,\"messagesPerSecond\":36214.42626397436,\"validationMs\":6.649951,\"scriptElapsedMs\":2811.925894,\"rssBeforeBytes\":46075904,\"rssAfterBytes\":253829120,\"rssDeltaBytes\":207753216,\"validated\":true,\"generated\":100000,\"acknowledgements\":{\"count\":100000,\"checksum\":5000050000},\"published\":{\"count\":100000,\"checksum\":5000050000,\"valueChecksum\":10000100000},\"releaseErrors\":0,\"state\":{\"keys\":128,\"events\":100000,\"eventIdChecksum\":5000050000,\"total\":100000,\"weightedTotal\":6448464,\"sourceLoads\":128}}\n",
+      "stderr": ""
+    }
+  ],
+  "summary": {
+    "startup": {
+      "node": {
+        "attempted": 5,
+        "succeeded": 5,
+        "failed": 0,
+        "wallMs": {
+          "median": 71.49574,
+          "min": 65.330927,
+          "max": 76.195363
+        },
+        "elapsedMs": {
+          "median": 9.288205,
+          "min": 8.453033,
+          "max": 12.321725
+        },
+        "coreRequireMs": {
+          "median": 29.839295,
+          "min": 27.000758,
+          "max": 31.917616
+        },
+        "scriptElapsedMs": {
+          "median": 48.147446,
+          "min": 45.275394,
+          "max": 50.087476
+        },
+        "messagesPerSecond": null,
+        "rssBeforeBytes": {
+          "median": 73809920,
+          "min": 73580544,
+          "max": 73879552
+        },
+        "rssAfterBytes": {
+          "median": 77811712,
+          "min": 77545472,
+          "max": 78151680
+        },
+        "rssDeltaBytes": {
+          "median": 3932160,
+          "min": 3735552,
+          "max": 4521984
+        }
+      },
+      "bun": {
+        "attempted": 5,
+        "succeeded": 5,
+        "failed": 0,
+        "wallMs": {
+          "median": 59.661998,
+          "min": 57.388656,
+          "max": 61.50367
+        },
+        "elapsedMs": {
+          "median": 7.556217,
+          "min": 7.282572,
+          "max": 7.970827
+        },
+        "coreRequireMs": {
+          "median": 29.249288,
+          "min": 28.888056,
+          "max": 31.427401
+        },
+        "scriptElapsedMs": {
+          "median": 51.55557,
+          "min": 51.076346,
+          "max": 54.11841
+        },
+        "messagesPerSecond": null,
+        "rssBeforeBytes": {
+          "median": 45617152,
+          "min": 45060096,
+          "max": 45694976
+        },
+        "rssAfterBytes": {
+          "median": 52355072,
+          "min": 52035584,
+          "max": 53002240
+        },
+        "rssDeltaBytes": {
+          "median": 6868992,
+          "min": 6402048,
+          "max": 7307264
+        }
+      }
+    },
+    "stateless": {
+      "node": {
+        "attempted": 5,
+        "succeeded": 5,
+        "failed": 0,
+        "wallMs": {
+          "median": 10080.615031,
+          "min": 9963.96124,
+          "max": 10202.452721
+        },
+        "elapsedMs": {
+          "median": 10006.665527,
+          "min": 9890.307116,
+          "max": 10129.917155
+        },
+        "coreRequireMs": {
+          "median": 26.596259,
+          "min": 26.198344,
+          "max": 27.596402
+        },
+        "scriptElapsedMs": {
+          "median": 10042.13133,
+          "min": 9929.307373,
+          "max": 10166.109504
+        },
+        "messagesPerSecond": {
+          "median": 9993.338912965548,
+          "min": 9871.74904492099,
+          "max": 10110.909482095398
+        },
+        "rssBeforeBytes": {
+          "median": 73740288,
+          "min": 73502720,
+          "max": 74305536
+        },
+        "rssAfterBytes": {
+          "median": 321060864,
+          "min": 317820928,
+          "max": 353140736
+        },
+        "rssDeltaBytes": {
+          "median": 247558144,
+          "min": 243515392,
+          "max": 279400448
+        }
+      },
+      "bun": {
+        "attempted": 5,
+        "succeeded": 5,
+        "failed": 0,
+        "wallMs": {
+          "median": 2284.736554,
+          "min": 2234.3002,
+          "max": 2311.110134
+        },
+        "elapsedMs": {
+          "median": 2222.415694,
+          "min": 2178.082433,
+          "max": 2247.687238
+        },
+        "coreRequireMs": {
+          "median": 32.034943,
+          "min": 28.579094,
+          "max": 33.559556
+        },
+        "scriptElapsedMs": {
+          "median": 2269.221222,
+          "min": 2220.977189,
+          "max": 2295.621857
+        },
+        "messagesPerSecond": {
+          "median": 44996.08253756329,
+          "min": 44490.17563892935,
+          "max": 45911.944600858915
+        },
+        "rssBeforeBytes": {
+          "median": 45957120,
+          "min": 44982272,
+          "max": 46014464
+        },
+        "rssAfterBytes": {
+          "median": 216109056,
+          "min": 211443712,
+          "max": 219992064
+        },
+        "rssDeltaBytes": {
+          "median": 170094592,
+          "min": 165433344,
+          "max": 174227456
+        }
+      }
+    },
+    "stateful": {
+      "node": {
+        "attempted": 5,
+        "succeeded": 5,
+        "failed": 0,
+        "wallMs": {
+          "median": 11206.391966,
+          "min": 11107.726257,
+          "max": 11242.327655
+        },
+        "elapsedMs": {
+          "median": 11117.427572,
+          "min": 11008.431074,
+          "max": 11150.746575
+        },
+        "coreRequireMs": {
+          "median": 27.81021,
+          "min": 26.402355,
+          "max": 29.476612
+        },
+        "scriptElapsedMs": {
+          "median": 11160.317834,
+          "min": 11063.528719,
+          "max": 11196.567796
+        },
+        "messagesPerSecond": {
+          "median": 8994.886573568225,
+          "min": 8968.009390886906,
+          "max": 9083.946597638478
+        },
+        "rssBeforeBytes": {
+          "median": 74293248,
+          "min": 73179136,
+          "max": 74350592
+        },
+        "rssAfterBytes": {
+          "median": 361418752,
+          "min": 353103872,
+          "max": 373223424
+        },
+        "rssDeltaBytes": {
+          "median": 288239616,
+          "min": 279433216,
+          "max": 298872832
+        }
+      },
+      "bun": {
+        "attempted": 5,
+        "succeeded": 5,
+        "failed": 0,
+        "wallMs": {
+          "median": 2805.192901,
+          "min": 2719.581258,
+          "max": 2825.996504
+        },
+        "elapsedMs": {
+          "median": 2727.371645,
+          "min": 2653.985995,
+          "max": 2761.330506
+        },
+        "coreRequireMs": {
+          "median": 29.209949,
+          "min": 28.5469,
+          "max": 32.936334
+        },
+        "scriptElapsedMs": {
+          "median": 2788.237055,
+          "min": 2704.980421,
+          "max": 2811.925894
+        },
+        "messagesPerSecond": {
+          "median": 36665.33682101106,
+          "min": 36214.42626397436,
+          "max": 37679.17396263427
+        },
+        "rssBeforeBytes": {
+          "median": 46075904,
+          "min": 45563904,
+          "max": 46133248
+        },
+        "rssAfterBytes": {
+          "median": 253829120,
+          "min": 249495552,
+          "max": 257503232
+        },
+        "rssDeltaBytes": {
+          "median": 207753216,
+          "min": 203870208,
+          "max": 211939328
+        }
+      }
+    }
+  },
+  "finishedAt": "2026-10-04T16:28:27.554Z",
+  "failedAttempts": 0,
+  "validated": true
+}

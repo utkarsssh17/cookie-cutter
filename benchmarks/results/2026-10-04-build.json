@@ -1,0 +1,10 @@
+{
+    "sourceCommit": "ed2db562b4e1acc5c10a3e3b1a1f4093618227d5",
+    "compiledCoreJsFiles": 107,
+    "compiledCoreSha256": "bd35953b0e517d1d990ef2f6fda93e9689655b030850d3e681631f0f857b156c",
+    "hashMethod": "SHA256 of sorted repository-relative *.js paths, NUL, file bytes, NUL",
+    "yarnLockSha256": "bb6f32ebf7c2a89f48e6f635b043982b88354f861021ceee16673477a43917d9",
+    "buildCommand": "/home/dalai/.npm/_npx/4aa47c519def57bc/node_modules/node/bin/node node_modules/typescript/bin/tsc --project packages/core/tsconfig.json",
+    "installCommand": "yarn install --frozen-lockfile --ignore-scripts",
+    "unchangedAfterRun": true
+}
